@@ -1,6 +1,7 @@
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
 import java.io.IOException;
 
 public class Filehandlingdemo {
@@ -24,5 +25,25 @@ public class Filehandlingdemo {
 		}catch(IOException e) {
 			e.printStackTrace();
 		}
+	}
+	static void filewriterdemo() {
+		int i;
+		File myfile=new File();
+		try {
+			FileWriter fw=new FileWriter(myfile);
+			System.out.println("File opened");
+			System.out.println("---------");
+			fw.write("Using file writer to write\n");
+			fw.write("Using file writer to write one more line");
+			fw.close();
+
+		}catch(FileNotFoundException e) {
+			e.printStackTrace();
+		}catch(IOException e) {
+			e.printStackTrace();
+		}
+	}
+	static void bufferedreaderdemo() {
+		
 	}
 }
